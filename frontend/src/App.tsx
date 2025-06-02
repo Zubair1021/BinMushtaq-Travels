@@ -1,40 +1,48 @@
-import React, { useEffect, useState } from 'react';
-import Loader from './components/Loader';
-import Header from './components/Header';
-import ComingSoon from './components/ComingSoon';
-import Footer from './components/Footer';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import Home from './pages/Home';
+import Packages from './pages/Packages';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Loader from './components/shared/Loader';
+import ChatBot from './components/chat/ChatBot';
 
 function App() {
-  const [contentLoaded, setContentLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate content loading
     const timer = setTimeout(() => {
-      setContentLoaded(true);
-    }, 3000);
+      setIsLoading(false);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="relative min-h-screen">
-      <Loader />
-      
-      <div 
-        className={`absolute inset-0 bg-cover bg-center bg-no-repeat z-0 ${contentLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`} 
-        style={{ 
-          backgroundImage: "url('https://images.pexels.com/photos/3155666/pexels-photo-3155666.jpeg?auto=compress&cs=tinysrgb&w=1920')", 
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/70 via-blue-800/60 to-blue-900/80 backdrop-blur-sm"></div>
-      </div>
-      
-      <div className={`relative z-10 ${contentLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 ease-in-out delay-500`}>
-        <Header />
-        <ComingSoon />
-        <Footer />
-      </div>
-    </div>
+    <Router>
+      <ThemeProvider>
+        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+          <Navbar />
+          
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/packages" element={<Packages />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          )}
+          
+          <Footer />
+          <ChatBot />
+        </div>
+      </ThemeProvider>
+    </Router>
   );
 }
 
