@@ -15,7 +15,7 @@ const FAQ_DATA = {
   "booking": "To book a package, you can click the 'Book Now' button on any package detail page or contact our customer service team.",
   "payment": "We accept various payment methods including credit cards, bank transfers, and installment plans for selected packages.",
   "cancel": "Our cancellation policy varies by package type. Generally, full refunds are available up to 30 days before departure.",
-  "contact": "You can reach us at contact@binmustaq.com or call us at +1-234-567-8900 during business hours.",
+  "contact": "You can reach us at contact@binMushtaq.com or call us at +1-234-567-8900 during business hours.",
 };
 
 const ChatBot: React.FC = () => {

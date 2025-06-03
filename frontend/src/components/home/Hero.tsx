@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Slide {
   id: number;
@@ -92,19 +93,19 @@ const Hero: React.FC = () => {
                     {slide.subtitle}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a 
-                      href="/packages" 
+                    <Link
+                      to="/packages" 
                       className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-md transition-colors inline-flex items-center justify-center"
                     >
                       Explore Packages
                       <ArrowRight className="ml-2 h-5 w-5" />
-                    </a>
-                    <a 
-                      href="/contact" 
+                    </Link>
+                    <Link
+                      to="/contact" 
                       className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/20 px-8 py-3 rounded-md transition-colors inline-flex items-center justify-center"
                     >
                       Contact Us
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

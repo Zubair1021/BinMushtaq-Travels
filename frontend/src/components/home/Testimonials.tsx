@@ -28,7 +28,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ testimonials }) => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">What Our Pilgrims Say</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-xl mx-auto">
-            Hear from fellow Muslims who embarked on a blessed journey with Bin Mustaq.
+            Hear from fellow Muslims who embarked on a blessed journey with Bin Mushtaq.
           </p>
         </div>
 

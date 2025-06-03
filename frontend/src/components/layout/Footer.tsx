@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Youtube, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-4">Bin Mustaq</h3>
+            <h3 className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-4">Bin Mushtaq</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
               Discover spiritual journeys and unforgettable adventures with our premium travel experiences.
             </p>
@@ -24,11 +25,8 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <FooterLink href="#about" text="About Us" />
-              <FooterLink href="#packages" text="Our Packages" />
-              <FooterLink href="#destinations" text="Destinations" />
-              <FooterLink href="#testimonials" text="Testimonials" />
-              <FooterLink href="#faq" text="FAQs" />
+              <FooterLink to="/about" text="About Us" />
+              <FooterLink to="/packages" text="Our Packages" />
             </ul>
           </div>
 
@@ -36,11 +34,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Support</h4>
             <ul className="space-y-2">
-              <FooterLink href="#contact" text="Contact Us" />
-              <FooterLink href="#terms" text="Terms & Conditions" />
-              <FooterLink href="#privacy" text="Privacy Policy" />
-              <FooterLink href="#refund" text="Refund Policy" />
-              <FooterLink href="#help" text="Help Center" />
+              <FooterLink to="/contact" text="Contact Us" />
+              <FooterLink to="/" text="Terms & Conditions" />
+              <FooterLink to="/" text="Privacy Policy" />
+              <FooterLink to="/" text="Refund Policy" />
+              <FooterLink to="/" text="Help Center" />
             </ul>
           </div>
 
@@ -71,18 +69,18 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} Bin Mustaq Travel. All rights reserved.
+              &copy; {new Date().getFullYear()} Bin Mushtaq Travel. All rights reserved.
             </p>
             <div className="flex space-x-4">
-              <a href="#terms" className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
+              <Link to="/" className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
                 Terms
-              </a>
-              <a href="#privacy" className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
+              </Link>
+              <Link to="/" className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
                 Privacy
-              </a>
-              <a href="#cookies" className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
+              </Link>
+              <Link to="/" className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
                 Cookies
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -92,18 +90,18 @@ const Footer: React.FC = () => {
 };
 
 interface FooterLinkProps {
-  href: string;
+  to: string;
   text: string;
 }
 
-const FooterLink: React.FC<FooterLinkProps> = ({ href, text }) => (
+const FooterLink: React.FC<FooterLinkProps> = ({ to, text }) => (
   <li>
-    <a 
-      href={href} 
+    <Link
+      to={to} 
       className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
     >
       {text}
-    </a>
+    </Link>
   </li>
 );
 
@@ -112,12 +110,12 @@ interface SocialIconProps {
 }
 
 const SocialIcon: React.FC<SocialIconProps> = ({ icon }) => (
-  <a 
-    href="#" 
+  <Link 
+    to="#" 
     className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-colors"
   >
     {icon}
-  </a>
+  </Link>
 );
 
 export default Footer;

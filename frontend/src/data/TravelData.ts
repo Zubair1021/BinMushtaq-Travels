@@ -545,7 +545,7 @@ export const testimonials: Testimonial[] = [
     name: 'Ahmed Abdullah',
     avatar: 'https://images.unsplash.com/photo-1619235462942-a3aec8aa39cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fE11c2xpbSUyMG1hbiUyMHBpY3xlbnwwfDB8MHx8fDA%3D',
     rating: 5,
-    text: 'Our Umrah experience with Bin Mustaq was truly life-changing. The arrangements were perfect, the accommodation was close to Haram, and the guides were knowledgeable and helpful throughout our journey.',
+    text: 'Our Umrah experience with Bin Mushtaq was truly life-changing. The arrangements were perfect, the accommodation was close to Haram, and the guides were knowledgeable and helpful throughout our journey.',
     packageId: 'umrah-1',
     date: 'March 2024'
   },
