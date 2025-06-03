@@ -249,7 +249,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
-                      name="user_name"
+                      name="name"
                       className="w-full px-4 py-2 rounded-lg border dark:border-gray-600 focus:ring-2 focus:ring-primary-500 dark:bg-gray-700 dark:text-white transition-all duration-300"
                       required
                     />
@@ -265,7 +265,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="email"
-                      name="user_email"
+                      name="email"
                       className="w-full px-4 py-2 rounded-lg border dark:border-gray-600 focus:ring-2 focus:ring-primary-500 dark:bg-gray-700 dark:text-white transition-all duration-300"
                       required
                     />
@@ -282,7 +282,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
-                    name="subject"
+                    name="title"
                     className="w-full px-4 py-2 rounded-lg border dark:border-gray-600 focus:ring-2 focus:ring-primary-500 dark:bg-gray-700 dark:text-white transition-all duration-300"
                     required
                   />
