@@ -3,6 +3,7 @@ import Hero from '../components/home/Hero';
 import PackageCategories from '../components/home/PackageCategories';
 import PackageCard from '../components/home/PackageCard';
 import PackageDetails from '../components/home/PackageDetails';
+import Airlines from '../components/home/Airlines';
 import Testimonials from '../components/home/Testimonials';
 import { packageCategories, travelPackages, testimonials } from '../data/TravelData';
 import { TravelPackage } from '../types';
@@ -31,6 +32,7 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <Hero />
+      <Airlines />
       
       <section id="packages" className="py-20">
         <div className="container mx-auto px-4">

@@ -143,6 +143,12 @@ const Navbar: React.FC = () => {
           >
             Packages
           </Link>
+                    <Link
+            to="/visa-services"
+            className="block py-2 text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400"
+          >
+            Visa Services
+          </Link>
           <Link
             to="/about"
             className="block py-2 text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400"
@@ -186,6 +192,9 @@ const NavLinks: React.FC<NavLinksProps> = ({ isScrolled, theme }) => {
       </Link>
       <Link to="/packages" className={linkClasses}>
         Packages
+      </Link>
+      <Link to="/visa-services" className={linkClasses}>
+        Visa Services
       </Link>
       <Link to="/about" className={linkClasses}>
         About

@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Packages from './pages/Packages';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import VisaServices from './pages/VisaServices';
 import Loader from './components/shared/Loader';
 import ChatBot from './components/chat/ChatBot';
 
@@ -22,7 +23,7 @@ function AppContent() {
   }, []);
 
   // Pages where ChatBot should be hidden
-  const hideChatBotRoutes = ['/packages', '/contact'];
+  const hideChatBotRoutes = ['/packages', '/contact', '/visa-services'];
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
@@ -35,6 +36,7 @@ function AppContent() {
           <Route path="/packages" element={<Packages />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/visa-services" element={<VisaServices />} />
         </Routes>
       )}
       <Footer />

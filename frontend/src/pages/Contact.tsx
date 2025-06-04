@@ -141,7 +141,7 @@ const Contact = () => {
                     icon: <Phone className="w-5 h-5" />,
                     title: 'Phone',
                     info: '+92 322 4340536',
-                    subInfo: 'Mon-Sat 9am-8pm',
+                    subInfo: 'Mon-Sat 9am-7pm',
                   },
                   {
                     icon: <Mail className="w-5 h-5" />,
@@ -159,7 +159,7 @@ const Contact = () => {
                     icon: <Clock className="w-5 h-5" />,
                     title: 'Working Hours',
                     info: 'Monday - Saturday',
-                    subInfo: '9:00 AM - 8:00 PM',
+                    subInfo: '9:00 AM - 7:00 PM',
                   },
                   {
                     icon: <MessageCircle className="w-5 h-5" />,
