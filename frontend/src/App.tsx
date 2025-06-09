@@ -22,7 +22,6 @@ function AppContent() {
     return () => clearTimeout(timer);
   }, []);
 
-
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
       <Navbar />
@@ -38,7 +37,8 @@ function AppContent() {
         </Routes>
       )}
       <Footer />
-      <Whatsapp />
+      {/* Only show Whatsapp if not on /visa-services */}
+      {location.pathname !== '/visa-services' && <Whatsapp />}
     </div>
   );
 }

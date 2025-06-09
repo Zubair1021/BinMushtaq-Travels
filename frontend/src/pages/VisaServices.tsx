@@ -333,13 +333,15 @@ const VisaServices = () => {
                     </ul>
                   </div>
 
-                  <button
-                    onClick={() => handleApplyNow(selectedVisa)}
-                    className="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 rounded-lg transition-colors flex items-center justify-center space-x-2"
-                  >
-                    <span>Apply Now</span>
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
+                    <div className="sticky bottom-0 bg-white dark:bg-gray-800 pt-4 pb-2 z-10">
+                    <button
+                      onClick={() => handleApplyNow(selectedVisa)}
+                      className="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                    >
+                      <span>Apply Now</span>
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                    </div>
                 </div>
               </motion.div>
             </motion.div>
