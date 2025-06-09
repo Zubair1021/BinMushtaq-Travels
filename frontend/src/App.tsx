@@ -9,7 +9,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import VisaServices from './pages/VisaServices';
 import Loader from './components/shared/Loader';
-import ChatBot from './components/chat/ChatBot';
+import Whatsapp from './components/chat/WhatsappChat';
 
 function AppContent() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,8 +22,6 @@ function AppContent() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Pages where ChatBot should be hidden
-  const hideChatBotRoutes = ['/packages', '/contact', '/visa-services'];
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
@@ -40,7 +38,7 @@ function AppContent() {
         </Routes>
       )}
       <Footer />
-      {!hideChatBotRoutes.includes(location.pathname) && <ChatBot />}
+      <Whatsapp />
     </div>
   );
 }

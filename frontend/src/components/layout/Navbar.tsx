@@ -23,32 +23,29 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
           ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-md py-3'
           : theme === 'dark'
-          ? 'bg-transparent py-6'
-          : 'bg-white/80 backdrop-blur-sm py-6'
-      }`}
+            ? 'bg-transparent py-6'
+            : 'bg-white/80 backdrop-blur-sm py-6'
+        }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex flex-col items-start">
           <span
-            className={`text-2xl font-bold typewriter-text ${
-              isScrolled || theme === 'dark'
+            className={`text-2xl font-bold typewriter-text ${isScrolled || theme === 'dark'
                 ? 'text-primary-600 dark:text-primary-400'
                 : 'text-gray-800'
-            }`}
+              }`}
           >
             Bin Mushtaq
           </span>
           <span
-            className={`text-xs font-medium mt-0.5 ${
-              isScrolled || theme === 'dark'
+            className={`text-xs font-medium mt-0.5 ${isScrolled || theme === 'dark'
                 ? 'text-gray-500 dark:text-gray-300'
                 : 'text-gray-600'
-            }`}
+              }`}
           >
             Travels & Tours
           </span>
@@ -62,11 +59,10 @@ const Navbar: React.FC = () => {
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
-            className={`p-2 rounded-full transition-colors ${
-              isScrolled
+            className={`p-2 rounded-full transition-colors ${isScrolled
                 ? 'hover:bg-gray-200 dark:hover:bg-gray-700'
                 : 'hover:bg-gray-200 dark:hover:bg-gray-700/30'
-            }`}
+              }`}
           >
             {theme === 'dark' ? (
               <Sun className="w-5 h-5 text-yellow-400" />
@@ -81,11 +77,10 @@ const Navbar: React.FC = () => {
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
-            className={`p-2 rounded-full transition-colors ${
-              isScrolled
+            className={`p-2 rounded-full transition-colors ${isScrolled
                 ? 'hover:bg-gray-200 dark:hover:bg-gray-700'
                 : 'hover:bg-gray-200 dark:hover:bg-gray-700/30'
-            }`}
+              }`}
           >
             {theme === 'dark' ? (
               <Sun className="w-5 h-5 text-yellow-400" />
@@ -97,27 +92,24 @@ const Navbar: React.FC = () => {
           <button
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
-            className={`p-2 rounded-full transition-colors ${
-              isScrolled
+            className={`p-2 rounded-full transition-colors ${isScrolled
                 ? 'hover:bg-gray-200 dark:hover:bg-gray-700'
                 : 'hover:bg-gray-200 dark:hover:bg-gray-700/30'
-            }`}
+              }`}
           >
             {isMobileMenuOpen ? (
               <X
-                className={`w-6 h-6 ${
-                  isScrolled || theme === 'dark'
+                className={`w-6 h-6 ${isScrolled || theme === 'dark'
                     ? 'text-gray-800 dark:text-white'
                     : 'text-gray-800'
-                }`}
+                  }`}
               />
             ) : (
               <Menu
-                className={`w-6 h-6 ${
-                  isScrolled || theme === 'dark'
+                className={`w-6 h-6 ${isScrolled || theme === 'dark'
                     ? 'text-gray-800 dark:text-white'
                     : 'text-gray-800'
-                }`}
+                  }`}
               />
             )}
           </button>
@@ -126,43 +118,48 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute w-full bg-white dark:bg-gray-900 shadow-lg transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'max-h-96 py-4' : 'max-h-0 overflow-hidden'
-        }`}
+        className={`md:hidden absolute w-full bg-white dark:bg-gray-900 shadow-lg transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-96 py-4' : 'max-h-0 overflow-hidden'
+          }`}
       >
         <div className="container mx-auto px-4 flex flex-col space-y-4">
           <Link
             to="/"
+            onClick={() => setIsMobileMenuOpen(false)}
             className="block py-2 text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400"
           >
             Home
           </Link>
           <Link
             to="/packages"
-            className="block py-2 text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="block py-2 text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 blink-dot"
           >
             Packages
           </Link>
-                    <Link
+          <Link
             to="/visa-services"
-            className="block py-2 text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="block py-2 text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 blink-dot"
           >
             Visa Services
           </Link>
           <Link
             to="/about"
+            onClick={() => setIsMobileMenuOpen(false)}
             className="block py-2 text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400"
           >
             About
           </Link>
           <Link
             to="/contact"
+            onClick={() => setIsMobileMenuOpen(false)}
             className="block py-2 text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400"
           >
             Contact
           </Link>
           <Link
             to="/packages"
+            onClick={() => setIsMobileMenuOpen(false)}
             className="block py-2 px-4 bg-primary-600 hover:bg-primary-700 text-white rounded-md text-center transition-colors"
           >
             Book Now
@@ -179,21 +176,20 @@ interface NavLinksProps {
 }
 
 const NavLinks: React.FC<NavLinksProps> = ({ isScrolled, theme }) => {
-  const linkClasses = `transition-colors ${
-    isScrolled || theme === 'dark'
+  const linkClasses = `transition-colors ${isScrolled || theme === 'dark'
       ? 'text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400'
       : 'text-gray-800 hover:text-primary-600'
-  }`;
+    }`;
 
   return (
     <>
       <Link to="/" className={linkClasses}>
         Home
       </Link>
-      <Link to="/packages" className={linkClasses}>
+      <Link to="/packages" className={`${linkClasses} blink-dot`}>
         Packages
       </Link>
-      <Link to="/visa-services" className={linkClasses}>
+      <Link to="/visa-services" className={`${linkClasses} blink-dot`}>
         Visa Services
       </Link>
       <Link to="/about" className={linkClasses}>
@@ -204,16 +200,15 @@ const NavLinks: React.FC<NavLinksProps> = ({ isScrolled, theme }) => {
       </Link>
       <Link
         to="/packages"
-        className={`py-2 px-4 rounded-md transition-colors ${
-          isScrolled
+        className={`py-2 px-4 rounded-md transition-colors ${isScrolled
             ? 'bg-primary-600 hover:bg-primary-700 text-white'
             : 'bg-primary-600 hover:bg-primary-700 text-white'
-        }`}
+          }`}
       >
         Book Now
       </Link>
 
-      {/* Typewriter Animation */}
+      {/* Typewriter Animation + Blink Dot Animation */}
       <style>
         {`
           @keyframes typewriter {
@@ -228,6 +223,11 @@ const NavLinks: React.FC<NavLinksProps> = ({ isScrolled, theme }) => {
             50% { border-color: orange }
           }
 
+          @keyframes blinkDot {
+            0%, 100% { opacity: 0 }
+            50% { opacity: 1 }
+          }
+
           .typewriter-text {
             display: inline-block;
             overflow: hidden;
@@ -236,6 +236,13 @@ const NavLinks: React.FC<NavLinksProps> = ({ isScrolled, theme }) => {
             animation: typewriter 6s steps(30) infinite,
                    blinkCaret 1s step-end infinite;
             animation-delay: 2s, 2s;
+          }
+
+          .blink-dot::after {
+            content: ' •';
+            animation: blinkDot 1s infinite;
+            margin-left: 4px;
+            color: #ef4444; /* Red dot color, adjustable */
           }
         `}
       </style>

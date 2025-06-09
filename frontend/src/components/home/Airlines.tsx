@@ -7,6 +7,10 @@ import etihadLogo from '../../media/Etihad.png';
 import pialogo from '../../media/PIA.png'; 
 import turkishlogo from '../../media/Turkish.png'; 
 import airbluelogo from '../../media/AirBlue.png'; 
+import airsiallogo from '../../media/AirSial.png'; 
+import airinduslogo from '../../media/AirIndus.png'; 
+import airarabialogo from '../../media/AirArabia.png'; 
+
 
 
 const airlineLogos = [
@@ -34,9 +38,21 @@ const airlineLogos = [
     name: 'Turkish Airline',
     logo: turkishlogo,
   },
-      {
+  {
     name: 'Airblue Airline',
     logo: airbluelogo,
+  },
+  {
+    name: 'AirSial Airline',
+    logo: airsiallogo,
+  },
+  {
+    name: 'AirIndus Airline',
+    logo: airinduslogo,
+  },
+  {
+    name: 'AirArabia Airline',
+    logo: airarabialogo,
   },
 ];
 
