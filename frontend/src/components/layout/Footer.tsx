@@ -3,6 +3,12 @@ import { Facebook, Twitter, Instagram, Youtube, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+
+  const handleDeveloperClick = () => {
+    const message = "Hi ZJ Developers (Muhammad Zubair), I saw your work on Bin Mushtaq Travel website. I'm interested in discussing a website development project. Can you please share more information about your services?";
+    const whatsappUrl = `https://wa.me/923268550359?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
   return (
     <footer className="bg-gray-100 dark:bg-gray-900 pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -49,14 +55,14 @@ const Footer: React.FC = () => {
               Subscribe to our newsletter for special deals and updates.
             </p>
             <form className="flex flex-col space-y-2">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
+              <input
+                type="email"
+                placeholder="Your email address"
                 className="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800 dark:text-white"
                 required
               />
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md transition-colors"
               >
                 <Mail size={16} className="mr-2" />
@@ -68,10 +74,22 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} Bin Mushtaq Travel. All rights reserved.
-            </p>
-            <div className="flex space-x-4">
+            <div className="flex flex-col md:flex-row items-center gap-2 mb-4 md:mb-0">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                &copy; {new Date().getFullYear()} Bin Mushtaq Travel. All rights reserved.
+              </p>
+              <span className="hidden md:block text-gray-400">•</span>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+                Developed by{" "}
+                <button
+                  onClick={handleDeveloperClick}
+                  className="text-primary-600 dark:text-primary-400 hover:underline font-medium"
+                >
+                  ZJ Developer
+                </button>
+              </p>
+            </div>
+            <div className="flex space-x-4 sm:mr-10">
               <Link to="/" className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
                 Terms
               </Link>
@@ -97,7 +115,7 @@ interface FooterLinkProps {
 const FooterLink: React.FC<FooterLinkProps> = ({ to, text }) => (
   <li>
     <Link
-      to={to} 
+      to={to}
       className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
     >
       {text}
@@ -110,8 +128,8 @@ interface SocialIconProps {
 }
 
 const SocialIcon: React.FC<SocialIconProps> = ({ icon }) => (
-  <Link 
-    to="#" 
+  <Link
+    to="#"
     className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-colors"
   >
     {icon}
