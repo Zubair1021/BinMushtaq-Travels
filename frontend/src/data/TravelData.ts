@@ -37,94 +37,189 @@ export const packageCategories: PackageCategory[] = [
 ];
 
 export const travelPackages: TravelPackage[] = [
-  {
-    id: 'umrah-1',
-    title: 'Deluxe Umrah Package',
-    description: 'A comprehensive 10-day spiritual journey to the holy cities of Makkah and Madinah, staying in premium accommodations close to the holy sites with expert religious guides.',
-    image: 'https://images.pexels.com/photos/2089799/pexels-photo-2089799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    categoryId: 'umrah',
-    price: 2500,
-    duration: '10 Days',
-    location: 'Makkah & Madinah, Saudi Arabia',
-    rating: 4.8,
-    features: [
-      'Visa processing and support',
-      'Return flights from major cities',
-      '5-star hotel accommodations',
-      'Private transportation',
-      'Experienced religious guides',
-      'All meals included',
-      'Ziyarat to historical sites'
-    ],
-    included: [
-      'Umrah visa fees',
-      'Return international flights',
-      'Hotel accommodations',
-      'Daily breakfast and dinner',
-      'Private air-conditioned transportation',
-      'English & Arabic speaking guides',
-      'Ziyarat trips in Makkah and Madinah'
-    ],
-    notIncluded: [
-      'Personal expenses',
-      'Travel insurance',
-      'PCR tests if required',
-      'Optional activities',
-      'Tips for guides and drivers'
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: 'Arrival in Jeddah',
-        description: 'Arrive at King Abdulaziz International Airport. Meet and greet by our representative and transfer to your hotel in Makkah.'
-      },
-      {
-        day: 2,
-        title: 'Makkah - Umrah Rituals',
-        description: 'After Fajr prayer, our guide will assist you with Umrah rituals including Tawaf and Sa\'i. Rest of the day free for prayers.'
-      },
-      {
-        day: 3,
-        title: 'Makkah - Holy Sites',
-        description: 'Visit important historical sites around Makkah including Jabal al-Noor, Jabal Thawr, and Hudaybiyyah.'
-      },
-      {
-        day: 4,
-        title: 'Makkah - Free Day',
-        description: 'Full day for personal worship and prayers at Masjid al-Haram.'
-      },
-      {
-        day: 5,
-        title: 'Transfer to Madinah',
-        description: 'After Fajr prayer, check-out from hotel and transfer to Madinah by private vehicle.'
-      },
-      {
-        day: 6,
-        title: 'Madinah - Masjid Nabawi',
-        description: 'Visit Masjid Nabawi and pray in Riyadh-ul-Jannah. Evening lecture on the importance of Madinah.'
-      },
-      {
-        day: 7,
-        title: 'Madinah - Historical Sites',
-        description: 'Visit historical sites including Masjid Quba, Masjid Qiblatain, and Mount Uhud.'
-      },
-      {
-        day: 8,
-        title: 'Madinah - Free Day',
-        description: 'Full day for personal worship at Masjid Nabawi.'
-      },
-      {
-        day: 9,
-        title: 'Madinah - Free Day',
-        description: 'Another day for personal worship and reflection.'
-      },
-      {
-        day: 10,
-        title: 'Departure',
-        description: 'Check-out from hotel and transfer to King Abdulaziz International Airport for your return flight.'
-      }
-    ]
-  },
+{
+  id: 'umrah-1',
+  title: '5 Star Umrah Package',
+  description: 'A 15-day Umrah journey with premium 5-star accommodations in Makkah and Madinah, including convenient shuttle service and comfortable quad bedrooms.',
+  image: 'https://cdn.pixabay.com/photo/2018/04/22/17/32/masjid-nabawi-3341739_640.jpg',
+  hotelImages: [
+    "/hotelmedia/Makkah-Hotel-4.png",
+    "/hotelmedia/Makkah-Hotel-1.png",
+    "/hotelmedia/Makkah-Hotel-2.png",
+    "/hotelmedia/Makkah-Hotel-3.png"
+  ],
+  categoryId: 'umrah',
+  price: 250000,
+  duration: '15 Days',
+  location: 'Makkah & Madinah, Saudi Arabia',
+  rating: 5.0,
+  features: [
+    '5-star Voco Makkah hotel with shuttle service',
+    'Kinan Madinah Hotel (900 meters from Masjid Nabawi)',
+    'Quad bed room accommodation',
+    'Comfortable stay in both holy cities'
+  ],
+  included: [
+    'Hotel accommodations in Makkah & Madinah',
+    'Shuttle service in Makkah',
+    'Quad bed room facilities'
+  ],
+  notIncluded: [
+    'Flights',
+    'Visa fees',
+    'Meals',
+    'Personal expenses'
+  ],
+  itinerary: [
+    {
+      day: 1,
+      title: 'Arrival in Makkah',
+      description: 'Check-in at Voco 5-star hotel with shuttle service. Rest and prepare for Umrah rituals.'
+    },
+    {
+      day: 2,
+      title: 'Makkah - Perform Umrah',
+      description: 'Perform Umrah rituals at Masjid al-Haram. Shuttle service available from hotel.'
+    },
+    {
+      day: 3,
+      title: 'Makkah - Free Day',
+      description: 'Day for personal worship and prayers at Masjid al-Haram.'
+    },
+    {
+      day: 4,
+      title: 'Makkah - Free Day',
+      description: 'Another day for personal prayers and worship.'
+    },
+    {
+      day: 5,
+      title: 'Makkah - Free Day',
+      description: 'Continue personal worship and reflection in Makkah.'
+    },
+    {
+      day: 6,
+      title: 'Makkah - Free Day',
+      description: 'Optional prayers and rest day.'
+    },
+    {
+      day: 7,
+      title: 'Transfer to Madinah',
+      description: 'Check-out from hotel and travel to Madinah. Check-in at Kinan Madinah Hotel (900m from Masjid Nabawi).'
+    },
+    {
+      day: 8,
+      title: 'Madinah - Visit Masjid Nabawi',
+      description: 'Pray at Masjid Nabawi and spend time in worship.'
+    },
+    {
+      day: 9,
+      title: 'Madinah - Free Day',
+      description: 'Day dedicated to personal prayers and worship at Masjid Nabawi.'
+    },
+    {
+      day: 10,
+      title: 'Madinah - Free Day',
+      description: 'Continue worship and rest near Masjid Nabawi.'
+    },
+    {
+      day: 11,
+      title: 'Madinah - Free Day',
+      description: 'Another full day for worship and prayers.'
+    },
+    {
+      day: 12,
+      title: 'Madinah - Free Day',
+      description: 'Time for reflection and personal prayers.'
+    },
+    {
+      day: 13,
+      title: 'Madinah - Free Day',
+      description: 'Engage in worship at Masjid Nabawi.'
+    },
+    {
+      day: 14,
+      title: 'Madinah - Free Day',
+      description: 'Final day for worship and rest in Madinah.'
+    },
+    {
+      day: 15,
+      title: 'Departure',
+      description: 'Check-out from hotel and transfer for return journey.'
+    }
+  ]
+},
+{
+  id: 'umrah-2',
+  title: 'Premium 7 Days Umrah Package',
+  description: 'A 7-day Umrah journey with premium 5-star accommodations in Makkah and comfortable stay in Madinah, offering quad bedrooms for a peaceful pilgrimage.',
+  image: 'https://cdn.pixabay.com/photo/2022/10/28/03/48/hajj-7552281_640.jpg',
+  hotelImages: [
+    "https://cdn.pixabay.com/photo/2022/10/28/03/48/hajj-7552281_640.jpg",
+    "/hotelmedia/Makkah-Hotel-3.png",
+    "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  ],
+  categoryId: 'umrah',
+  price: 320000,
+  duration: '7 Days',
+  location: 'Makkah & Madinah, Saudi Arabia',
+  rating: 5.0,
+  features: [
+    '5-star Swissotel Al Maqam Makkah (City View)',
+    'Odst Madinah 3-star hotel',
+    'Quad bed room accommodation',
+    'Comfortable stay in both holy cities'
+  ],
+  included: [
+    'Hotel accommodations in Makkah & Madinah',
+    'Quad bed room facilities'
+  ],
+  notIncluded: [
+    'Flights',
+    'Visa fees',
+    'Meals',
+    'Personal expenses'
+  ],
+  itinerary: [
+    {
+      day: 1,
+      title: 'Arrival in Makkah',
+      description: 'Check-in at Swissotel Al Maqam 5-star hotel (City View). Rest and prepare for Umrah rituals.'
+    },
+    {
+      day: 2,
+      title: 'Makkah - Perform Umrah',
+      description: 'Perform Umrah rituals at Masjid al-Haram and spend the day in worship.'
+    },
+    {
+      day: 3,
+      title: 'Makkah - Free Day',
+      description: 'Day for personal worship and prayers at Masjid al-Haram.'
+    },
+    {
+      day: 4,
+      title: 'Transfer to Madinah',
+      description: 'Check-out from Makkah hotel and travel to Madinah. Check-in at Odst 3-star hotel.'
+    },
+    {
+      day: 5,
+      title: 'Madinah - Visit Masjid Nabawi',
+      description: 'Pray at Masjid Nabawi and dedicate the day to worship.'
+    },
+    {
+      day: 6,
+      title: 'Madinah - Free Day',
+      description: 'Day for personal prayers and reflection at Masjid Nabawi.'
+    },
+    {
+      day: 7,
+      title: 'Departure',
+      description: 'Check-out from hotel and transfer for return journey.'
+    }
+  ]
+},
+
+
 
 ];
 

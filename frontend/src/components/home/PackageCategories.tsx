@@ -1,6 +1,7 @@
 import React from 'react';
 import { PackageCategory } from '../../types';
-import { Plane, Umbrella, Fuel as Mosque, Mountain, GraduationCap } from 'lucide-react';
+import { Plane, Umbrella, Fuel as Mosque, Mountain, GraduationCap,ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface PackageCategoriesProps {
   activeCategory: string;
@@ -72,6 +73,16 @@ const PackageCategories: React.FC<PackageCategoriesProps> = ({
             {category.name}
           </button>
         ))}
+      </div>
+      
+      <div className="text-center mt-6">
+        <Link 
+          to="/packages" 
+          className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors group"
+        >
+          <span className="mr-2">For more about our packages, explore our complete collection</span>
+          <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+        </Link>
       </div>
     </div>
   );

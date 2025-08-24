@@ -38,7 +38,7 @@ function AppContent() {
       )}
       <Footer />
       {/* Only show Whatsapp if not on /visa-services */}
-      {location.pathname !== '/visa-services' && <Whatsapp />}
+      {location.pathname !== '/visa-services' &&location.pathname !== '/packages'   && <Whatsapp />}
     </div>
   );
 }

@@ -23,6 +23,8 @@ const PackageCard: React.FC<PackageCardProps> = ({ pack, onClick }) => {
     ));
   };
 
+
+
   return (
     <div 
       className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group cursor-pointer"

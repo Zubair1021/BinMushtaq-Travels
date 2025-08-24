@@ -14,6 +14,7 @@ export interface TravelPackage {
   title: string;
   description: string;
   image: string;
+  hotelImages: string[];
   categoryId: string;
   price: number;
   duration: string;
