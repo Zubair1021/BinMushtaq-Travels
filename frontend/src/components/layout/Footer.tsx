@@ -41,10 +41,10 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Support</h4>
             <ul className="space-y-2">
               <FooterLink to="/contact" text="Contact Us" />
-              <FooterLink to="/" text="Terms & Conditions" />
-              <FooterLink to="/" text="Privacy Policy" />
-              <FooterLink to="/" text="Refund Policy" />
-              <FooterLink to="/" text="Help Center" />
+              <FooterLink to="/terms" text="Terms & Conditions" />
+              <FooterLink to="/privacy" text="Privacy Policy" />
+              <FooterLink to="/visa-services" text="Visa Services" />
+              <FooterLink to="/contact" text="Help Center" />
             </ul>
           </div>
 
