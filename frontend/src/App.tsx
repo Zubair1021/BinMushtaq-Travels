@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { ThemeProvider } from './context/ThemeContext';
@@ -10,6 +11,7 @@ import Packages from './pages/Packages';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import VisaServices from './pages/VisaServices';
+import NotFound from './pages/NotFound';
 import Loader from './components/shared/Loader';
 import Whatsapp from './components/chat/WhatsappChat';
 
@@ -36,6 +38,7 @@ function AppContent() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/visa-services" element={<VisaServices />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       )}
       <Footer />
@@ -47,13 +50,15 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
-      <ThemeProvider>
-        <AppContent />
-        <Analytics />
-        <SpeedInsights />
-      </ThemeProvider>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <ThemeProvider>
+          <AppContent />
+          <Analytics />
+          <SpeedInsights />
+        </ThemeProvider>
+      </Router>
+    </HelmetProvider>
   );
 }
 

@@ -5,6 +5,7 @@ import PackageCard from '../components/home/PackageCard';
 import PackageDetails from '../components/home/PackageDetails';
 import Airlines from '../components/home/Airlines';
 import Testimonials from '../components/home/Testimonials';
+import SEO from '../components/shared/SEO';
 import { packageCategories, travelPackages, testimonials } from '../data/TravelData';
 import { TravelPackage } from '../types';
 
@@ -31,6 +32,12 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
+      <SEO 
+        title="Bin Mushtaq Travel & Tours - Premium Pakistan Travel Agency | Umrah, Hajj & Tour Packages"
+        description="Bin Mushtaq Travel & Tours offers premium travel services in Pakistan. Book Umrah packages, Hajj tours, domestic & international travel packages, visa services, and airline tickets at best prices."
+        keywords="Pakistan travel agency, Umrah packages, Hajj tours, travel packages Pakistan, visa services, airline tickets, international tours, domestic tourism, Karachi travel agency, Bin Mushtaq travels"
+        url="https://binmushtaqtravel.com/"
+      />
       <Hero />
       <Airlines />
       

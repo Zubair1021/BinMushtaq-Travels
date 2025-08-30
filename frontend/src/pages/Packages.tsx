@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { travelPackages, packageCategories } from '../data/TravelData';
 import PackageCard from '../components/home/PackageCard';
 import PackageDetails from '../components/home/PackageDetails';
+import SEO from '../components/shared/SEO';
 import { Search, Filter, X } from 'lucide-react';
 import { TravelPackage } from '../types';
 
@@ -50,6 +51,12 @@ const Packages = () => {
 
   return (
     <div className="min-h-screen pt-20 bg-gray-50 dark:bg-gray-900">
+      <SEO 
+        title="Travel Packages - Bin Mushtaq Travel & Tours | Umrah, Hajj & International Tours"
+        description="Browse our comprehensive collection of travel packages including Umrah packages, Hajj tours, international destinations, and domestic tourism options. Book your dream trip today!"
+        keywords="travel packages Pakistan, Umrah packages, Hajj tours, international travel, domestic tourism, tour packages, holiday packages, travel deals Pakistan"
+        url="https://binmushtaqtravel.com/packages"
+      />
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">

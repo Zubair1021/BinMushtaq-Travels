@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, Globe, Clock, FileCheck } from 'lucide-react';
+import SEO from '../components/shared/SEO';
 
 interface VisaType {
   id: string;
@@ -205,6 +206,12 @@ const VisaServices = () => {
 
   return (
     <div className="min-h-screen pt-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <SEO 
+        title="Visa Services - Bin Mushtaq Travel & Tours | Fast Visa Processing Pakistan"
+        description="Get fast and reliable visa processing services for all countries. Bin Mushtaq Travel & Tours offers professional visa assistance, document preparation, and application support."
+        keywords="visa services Pakistan, visa processing, visa application Pakistan, tourist visa, business visa, travel visa assistance, visa consultant Pakistan"
+        url="https://binmushtaqtravel.com/visa-services"
+      />
       <div className="container mx-auto px-4 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

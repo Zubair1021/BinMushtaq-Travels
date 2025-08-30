@@ -1,10 +1,17 @@
 import React from 'react';
 import { Users, Award, Globe, Heart, Plane } from 'lucide-react';
 import { motion } from 'framer-motion';
+import SEO from '../components/shared/SEO';
 
 const About = () => {
   return (
     <div className="min-h-screen pt-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden">
+      <SEO 
+        title="About Us - Bin Mushtaq Travel & Tours | Leading Pakistan Travel Agency"
+        description="Learn about Bin Mushtaq Travel & Tours - Pakistan's premier travel agency. Discover our mission, values, and commitment to providing exceptional travel experiences since our establishment."
+        keywords="about Bin Mushtaq travels, Pakistan travel agency history, travel company Pakistan, travel agency Karachi, about us travel services"
+        url="https://binmushtaqtravel.com/about"
+      />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative">
         {/* Animated Planes */}
         <motion.div

@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, Plane, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import SEO from '../components/shared/SEO';
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -39,7 +40,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pt-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden">
-
+      <SEO 
+        title="Contact Us - Bin Mushtaq Travel & Tours | Get in Touch for Travel Services"
+        description="Contact Bin Mushtaq Travel & Tours for inquiries about Umrah packages, Hajj tours, visa services, and travel planning. Reach out to our expert travel consultants today."
+        keywords="contact travel agency Pakistan, Bin Mushtaq contact, travel inquiry Pakistan, Umrah booking contact, Hajj tour contact, visa services contact"
+        url="https://binmushtaqtravel.com/contact"
+      />
       <div className="container mx-auto px-4 py-12 relative">
         {/* Animated Planes */}
         <motion.div
