@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -48,6 +50,8 @@ function App() {
     <Router>
       <ThemeProvider>
         <AppContent />
+        <Analytics />
+        <SpeedInsights />
       </ThemeProvider>
     </Router>
   );
