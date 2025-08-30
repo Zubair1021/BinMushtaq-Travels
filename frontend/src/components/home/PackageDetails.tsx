@@ -131,7 +131,7 @@ const PackageDetails: React.FC<PackageDetailsProps> = ({ pack, onClose }) => {
             <div className="mt-4 md:mt-0 bg-primary-50 dark:bg-primary-900/20 p-4 rounded-lg">
               <p className="text-gray-600 dark:text-gray-300 mb-1">Starting from</p>
               <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">
-                ${pack.price.toLocaleString()}
+                {pack.price.toLocaleString()} PKR
               </p>
               <p className="text-gray-500 dark:text-gray-400 text-sm">per person</p>
             </div>

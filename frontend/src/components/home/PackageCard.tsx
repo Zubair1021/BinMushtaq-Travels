@@ -39,7 +39,7 @@ const PackageCard: React.FC<PackageCardProps> = ({ pack, onClick }) => {
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
           <div className="flex justify-between items-center">
             <span className="text-white font-semibold">
-              ${pack.price.toLocaleString()}
+              {pack.price.toLocaleString()} PKR
             </span>
             <div className="flex">
               {renderStars(pack.rating)}
