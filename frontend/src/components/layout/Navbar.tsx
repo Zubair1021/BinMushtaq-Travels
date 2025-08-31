@@ -24,31 +24,34 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-md py-3'
+          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-md py-2 sm:py-3'
           : theme === 'dark'
-            ? 'bg-transparent py-6'
-            : 'bg-white/80 backdrop-blur-sm py-6'
+            ? 'bg-transparent py-4 sm:py-6'
+            : 'bg-white/80 backdrop-blur-sm py-4 sm:py-6'
         }`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="flex flex-col items-start">
-          <span
-            className={`text-2xl font-bold typewriter-text ${isScrolled || theme === 'dark'
-                ? 'text-primary-600 dark:text-primary-400'
-                : 'text-gray-800'
-              }`}
-          >
-            Bin Mushtaq
-          </span>
-          <span
-            className={`text-xs font-medium mt-0.5 ${isScrolled || theme === 'dark'
-                ? 'text-gray-500 dark:text-gray-300'
-                : 'text-gray-600'
-              }`}
-          >
-            Travels & Tours
-          </span>
+        <Link to="/" className="flex items-center">
+          {/* Company Name */}
+          <div className="flex flex-col items-start">
+            <span
+              className={`text-lg sm:text-xl lg:text-2xl font-bold typewriter-text ${isScrolled || theme === 'dark'
+                  ? 'text-primary-600 dark:text-primary-400'
+                  : 'text-gray-800'
+                }`}
+            >
+              Bin Mushtaq
+            </span>
+            <span
+              className={`text-xs font-medium mt-0.5 hidden sm:block ${isScrolled || theme === 'dark'
+                  ? 'text-gray-500 dark:text-gray-300'
+                  : 'text-gray-600'
+                }`}
+            >
+              Travels & Tours
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -73,7 +76,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center space-x-4">
+        <div className="md:hidden flex items-center space-x-2 sm:space-x-4">
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
@@ -121,7 +124,7 @@ const Navbar: React.FC = () => {
         className={`md:hidden absolute w-full bg-white dark:bg-gray-900 shadow-lg transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-96 py-4' : 'max-h-0 overflow-hidden'
           }`}
       >
-        <div className="container mx-auto px-4 flex flex-col space-y-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col space-y-4">
           <Link
             to="/"
             onClick={() => setIsMobileMenuOpen(false)}
