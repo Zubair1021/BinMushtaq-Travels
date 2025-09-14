@@ -1,7 +1,7 @@
 import React from 'react';
 import sedan from '../../media/SedanCar.png';
 import staria from '../../media/StariaCar.png';
-import gmc from '../../media/Gmccar.png';
+import gmc from '../../media/GmcCar.png';
 import hiace from '../../media/HiaceCar.png';
 import bus from '../../media/Buses.png';
 
