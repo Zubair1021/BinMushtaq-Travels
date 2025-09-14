@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute w-full bg-white dark:bg-gray-900 shadow-lg transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-96 py-4' : 'max-h-0 overflow-hidden'
+        className={`md:hidden absolute w-full bg-white dark:bg-gray-900 shadow-lg transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-100  py-4' : 'max-h-0 overflow-hidden'
           }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col space-y-4">
@@ -145,6 +145,13 @@ const Navbar: React.FC = () => {
             className="block py-2 text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 blink-dot"
           >
             Visa Services
+          </Link>
+          <Link
+            to="/transport-services"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="block py-2 text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 blink-dot"
+          >
+            Transport Services
           </Link>
           <Link
             to="/about"
@@ -194,6 +201,9 @@ const NavLinks: React.FC<NavLinksProps> = ({ isScrolled, theme }) => {
       </Link>
       <Link to="/visa-services" className={`${linkClasses} blink-dot`}>
         Visa Services
+      </Link>
+      <Link to="/transport-services" className={`${linkClasses} blink-dot`}>
+        Transport Services
       </Link>
       <Link to="/about" className={linkClasses}>
         About

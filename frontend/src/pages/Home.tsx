@@ -4,6 +4,7 @@ import PackageCategories from '../components/home/PackageCategories';
 import PackageCard from '../components/home/PackageCard';
 import PackageDetails from '../components/home/PackageDetails';
 import Airlines from '../components/home/Airlines';
+import OurServices from '../components/home/OurServices';
 import Testimonials from '../components/home/Testimonials';
 import SEO from '../components/shared/SEO';
 import { packageCategories, travelPackages, testimonials } from '../data/TravelData';
@@ -39,7 +40,8 @@ const Home: React.FC = () => {
         url="https://binmushtaqtravel.com/"
       />
       <Hero />
-      <Airlines />
+  <Airlines />
+  <OurServices />
       
       <section id="packages" className="py-20">
         <div className="container mx-auto px-4">

@@ -11,6 +11,7 @@ import Packages from './pages/Packages';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import VisaServices from './pages/VisaServices';
+import TransportServices from './pages/TransportServices';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import NotFound from './pages/NotFound';
@@ -45,6 +46,7 @@ function AppContent() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/visa-services" element={<VisaServices />} />
+          <Route path="/transport-services" element={<TransportServices />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
