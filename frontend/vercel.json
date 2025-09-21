@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "https://www.binmushtaqtravel.com/:path*",
+      "destination": "https://binmushtaqtravel.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

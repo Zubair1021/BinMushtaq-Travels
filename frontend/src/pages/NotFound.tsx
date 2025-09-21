@@ -1,16 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft } from 'lucide-react';
-import SEO from '../components/shared/SEO';
+import { Helmet } from 'react-helmet-async';
 
 const NotFound: React.FC = () => {
   return (
     <div className="min-h-screen pt-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 flex items-center justify-center">
-      <SEO 
-        title="Page Not Found - Bin Mushtaq Travel & Tours"
-        description="The page you're looking for doesn't exist. Return to Bin Mushtaq Travel & Tours homepage to explore our travel packages and services."
-        url="https://binmushtaqtravel.com/404"
-      />
+      <Helmet>
+        <title>404 - Page Not Found | Bin Mushtaq Travel & Tours</title>
+        <meta name="description" content="The page you're looking for doesn't exist. Return to Bin Mushtaq Travel & Tours homepage to explore our travel packages and services." />
+        <link rel="canonical" href="https://binmushtaqtravel.com/404" />
+        <meta property="og:title" content="404 - Page Not Found | Bin Mushtaq Travel & Tours" />
+        <meta property="og:description" content="The page you're looking for doesn't exist. Return to Bin Mushtaq Travel & Tours homepage to explore our travel packages and services." />
+        <meta property="og:url" content="https://binmushtaqtravel.com/404" />
+        <meta property="og:type" content="website" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="404 - Page Not Found | Bin Mushtaq Travel & Tours" />
+        <meta name="twitter:description" content="The page you're looking for doesn't exist. Return to Bin Mushtaq Travel & Tours homepage to explore our travel packages and services." />
+        <meta name="twitter:url" content="https://binmushtaqtravel.com/404" />
+      </Helmet>
       <div className="text-center px-4">
         <div className="max-w-md mx-auto">
           <h1 className="text-9xl font-bold text-primary-600 dark:text-primary-400 mb-4">404</h1>

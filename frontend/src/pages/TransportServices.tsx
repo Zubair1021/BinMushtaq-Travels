@@ -1,5 +1,4 @@
 import React from 'react';
-import transportService from '../media/Transport-Service.png';
 import { VehicleCards, BusRates } from '../components/home/TransportServiceCards';
 
 

@@ -35,6 +35,9 @@ const PackageCard: React.FC<PackageCardProps> = ({ pack, onClick }) => {
           src={pack.image} 
           alt={pack.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+          width="400"
+          height="192"
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
           <div className="flex justify-between items-center">

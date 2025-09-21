@@ -93,6 +93,9 @@ const Airlines = () => {
                   src={airline.logo}
                   alt={`${airline.name} logo`}
                   className="w-full h-full object-contain"
+                  loading="lazy"
+                  width="176"
+                  height="176"
                 />
               </motion.div>
             ))}
